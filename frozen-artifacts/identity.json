@@ -1,0 +1,61 @@
+{
+  "design": "v1.4",
+  "tiny": false,
+  "shape": {
+    "n_layer": 12,
+    "n_head": 12,
+    "n_embd": 768,
+    "block_size": 1024,
+    "vocab_size": 50304
+  },
+  "budget": {
+    "sequence": 1024,
+    "batch": 512,
+    "steps": 4960,
+    "warmup": 100000000,
+    "eval_every": 100000000,
+    "eval_sequences": 200
+  },
+  "data": {
+    "train.bin": "39c5a0ed2bf12d057704d0852fe0371dfcacc9ceeb3ffb77fec937dc6cd8a2ed",
+    "val.bin": "abf1621d4671024bd734e989d4345ad49db6faf2d0fac177654713fb3e941ed4",
+    "meta.json": "07ab48ebfcf871eba38be6c7b066b06c07c40d4cf8f865c9475079c7e3874c0d"
+  },
+  "meta": {
+    "source_dataset": "Skylion007/openwebtext",
+    "source_revision": "79d93d786212f7344586290adb811d4ae6a1762c",
+    "source_split": "train",
+    "streaming": true,
+    "shuffle_seed": 2357,
+    "shuffle_buffer": 10000,
+    "tokenizer": "tiktoken:gpt2",
+    "vocab_size": 50257,
+    "eot_token": 50256,
+    "dtype": "uint16",
+    "validation": {
+      "tokens": 10000000,
+      "documents_consumed": 8939,
+      "boundary_document_truncated": true
+    },
+    "train": {
+      "tokens": 1000000000,
+      "documents_consumed": 886601,
+      "boundary_document_truncated": true
+    },
+    "split_policy": "validation is consumed before training; an unused boundary-document tail is discarded so no source document crosses splits"
+  },
+  "lengths": {
+    "train": 1000000000,
+    "val": 10000000
+  },
+  "initialization_tensor_hash": "31e5a99433ff50d34b425230c282172539cb9b1d4e643a8375438746be6364b6",
+  "artifacts": {
+    "initial.pt": "a80eda8605609401d6775edc05f7a8e54d7ffd7cdfad0227bdbcf5b323be6988",
+    "windows.pt": "b325a4f6bd65ca034398481d7203c8afca2619e4eb3b7f601fce7cf5f03d8cab"
+  },
+  "preparation_environment": {
+    "torch": "2.9.1+cpu",
+    "numpy": "2.1.3"
+  },
+  "id": "9cabd9c54c6d717354f8f6750715f9280c5502f0a85a9032806b9c7956cbd76e"
+}

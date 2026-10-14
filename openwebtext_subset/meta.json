@@ -1,0 +1,23 @@
+{
+  "source_dataset": "Skylion007/openwebtext",
+  "source_revision": "79d93d786212f7344586290adb811d4ae6a1762c",
+  "source_split": "train",
+  "streaming": true,
+  "shuffle_seed": 2357,
+  "shuffle_buffer": 10000,
+  "tokenizer": "tiktoken:gpt2",
+  "vocab_size": 50257,
+  "eot_token": 50256,
+  "dtype": "uint16",
+  "validation": {
+    "tokens": 10000000,
+    "documents_consumed": 8939,
+    "boundary_document_truncated": true
+  },
+  "train": {
+    "tokens": 1000000000,
+    "documents_consumed": 886601,
+    "boundary_document_truncated": true
+  },
+  "split_policy": "validation is consumed before training; an unused boundary-document tail is discarded so no source document crosses splits"
+}
